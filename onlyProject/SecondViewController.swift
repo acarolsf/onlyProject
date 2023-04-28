@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  onlyProject
 //
 //  Created by Ana Carolina Ferreira on 28/04/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Clique aqui", for: .normal)
-        button.backgroundColor = .blue
+        button.backgroundColor = .systemPink
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(clickOnButton), for: .touchUpInside)
         return button
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
     }
 
     @objc func clickOnButton() {
-        self.navigationController?.pushViewController(SecondViewController(), animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
-
